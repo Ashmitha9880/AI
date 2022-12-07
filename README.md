@@ -1,5 +1,5 @@
 # AI  <br> <br>
-BFS <br>
+# BFS <br>
 graph = { <br>
   'A' : ['B','C'], <br>
   'B' : ['D', 'E'], <br>
@@ -25,7 +25,7 @@ def bfs(visited, graph, node): <br>
         visited.append(neighbour) <br>
         queue.append(neighbour) <br>
  <br>
-# Driver Code <br>
+#Driver Code <br>
 bfs(visited, graph, 'A') <br>
 
 
@@ -37,7 +37,7 @@ OUTPUT <br>
 
 
 
-2) TowerOfHanoi <br>
+# 2) TowerOfHanoi <br>
 
 
 def TowerOfHanoi(n , source, destination, auxiliary): <br>
@@ -58,7 +58,7 @@ OUTPUT <br>
 ![image](https://user-images.githubusercontent.com/97940767/206164983-912efb1f-7dec-408d-9d0f-66efdd4cead7.png) <br>
 
 
-3)# Using a Python dictionary to act as an adjacency list <br>
+# 3)# Using a Python dictionary to act as an adjacency list <br>
 graph = { <br>
   '5' : ['3','7'], <br>
   '3' : ['2', '4'], <br>
