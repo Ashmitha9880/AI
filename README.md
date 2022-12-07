@@ -48,10 +48,10 @@ def TowerOfHanoi(n , source, destination, auxiliary): <br>
     print ("Move disk",n,"from source",source,"to destination",destination) <br>
     TowerOfHanoi(n-1, auxiliary, destination, source) <br>
          
-# Driver code <br>
+#Driver code <br>
 n = 4 <br>
 TowerOfHanoi(n,'A','B','C') <br>
-# A, C, B are the name of rods <br>
+#A, C, B are the name of rods <br>
 
 OUTPUT <br>
 
@@ -77,7 +77,7 @@ def dfs(visited, graph, node):  #function for dfs  <br>
         for neighbour in graph[node]: <br>
             dfs(visited, graph, neighbour) <br>
 
-# Driver Code <br>
+#Driver Code <br>
 print("Following is the Depth-First Search") <br>
 dfs(visited, graph, '5') <br>
 
