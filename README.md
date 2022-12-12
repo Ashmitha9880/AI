@@ -38,3 +38,33 @@ bfs(visited, graph, '1')    # function calling<br>
 
 ![image](https://user-images.githubusercontent.com/97940767/207011954-3b5c91c2-b394-464d-ba0f-01fd68fe6149.png)
 
+
+# 2)  PROGRAM TO FIND DFS <br>
+
+#Using a Python dictionary to act as an adjacency list <br>
+graph = { <br>
+ '5' : ['3','7'], <br>
+ '3' : ['2', '4'], <br>
+ '7' : ['6'], <br>
+ '6': [], <br>
+ '2' : ['1'], <br>
+ '1':[], <br>
+ '4' : ['8'], <br>
+ '8' : [] <br>
+} <br>
+visited = set() # Set to keep track of visited nodes of graph. <br>
+
+def dfs(visited, graph, node):  #function for dfs  <br>
+    if node not in visited: <br>
+        print (node) <br>
+        visited.add(node) <br>
+        for neighbour in graph[node]: <br>
+            dfs(visited, graph, neighbour) <br>
+
+#Driver Code <br>
+print("Following is the Depth-First Search") <br>
+dfs(visited, graph, '5') <br>
+
+# OUTPUT
+![image](https://user-images.githubusercontent.com/97940767/207014283-2d648e14-37a8-414f-a91f-a626984050c7.png)
+
