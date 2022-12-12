@@ -1,5 +1,5 @@
 # AI  <br> <br>
-# 1) BFS <br>
+# 1)  PROGRAM TO FIND BFS <br>
 
 graph = { <br>
  '1' : ['2','10'],<br>
@@ -29,7 +29,7 @@ def bfs(visited, graph, node): #function for BFS<br>
         visited.append(neighbour)<br>
         queue.append(neighbour)<br>
 
-#  Driver Code<br>
+#Driver Code<br>
 print("Following is the Breadth-First Search")<br>
 bfs(visited, graph, '1')    # function calling<br>
 
