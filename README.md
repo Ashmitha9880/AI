@@ -141,3 +141,21 @@ waterJugSolver(0, 0) <br>
 
 ![image](https://user-images.githubusercontent.com/97940767/207561588-ad673d28-78cd-45c6-b1d4-cbaee2c317b0.png)<br>
 
+# 5)  PROGRAM TO FIND TOWER OF HANOI <br>
+
+def TowerOfHanoi(n , source, destination, auxiliary):<br>
+    if n==1:
+        print ("Move disk 1 from source",source,"to destination",destination)<br>
+        return
+    TowerOfHanoi(n-1, source, auxiliary, destination)<br>
+    print ("Move disk",n,"from source",source,"to destination",destination)<br>
+    TowerOfHanoi(n-1, auxiliary, destination, source)
+
+n = 3<br>
+TowerOfHanoi(n,'A','B','C')<br>
+
+# OUTPUT<br>
+
+![image](https://user-images.githubusercontent.com/97940767/207562314-34c88549-6fd0-4ff4-b63a-cc88a278869a.png)<br>
+
+
