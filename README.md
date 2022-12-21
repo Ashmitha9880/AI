@@ -69,7 +69,7 @@ dfs(visited, graph, '5') <br>
 ![image](https://user-images.githubusercontent.com/97940767/207014283-2d648e14-37a8-414f-a91f-a626984050c7.png)
 
 
-# 3)  PROGRAM TO FIND BRETH FIRST SEARCH <br>
+# 3)  PROGRAM TO FIND BEST FIRST SEARCH <br>
 
 
 from queue import PriorityQueue<br>
