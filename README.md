@@ -295,3 +295,12 @@ print("Winner is: " + str(play_game()))<br>
 
 
 # OUTPUT<br>
+
+![image](https://user-images.githubusercontent.com/97940767/208868867-8748ba11-90eb-42a1-9405-cf86162efb46.png)
+
+
+
+
+
+
+
