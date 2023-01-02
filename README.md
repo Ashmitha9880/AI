@@ -390,3 +390,89 @@ print("The final hypothesis is:",train(d,target))<br>
 # OUTPUT<br>
 
 ![image](https://user-images.githubusercontent.com/97940767/209803977-f7e1194d-8825-49ac-893b-9b6159cdf6d1.png)
+
+
+# 9). Write a program to implement the Candidate Elimination Algorithm <br>
+
+import csv<br>
+with open("ws.csv") as f:<br>
+    csv_file=csv.reader(f)<br>
+    data=list(csv_file)<br>
+    print(data)<br>
+    s=data[1][:-1]<br>
+    g=[['?' for i in range(len(s))] for j in range(len(s))]<br>
+    for i in data:<br>
+        if i[-1]=="Yes":<br>
+            for j in range(len(s)):<br>
+                if i[j]!=s[j]:<br>
+                    s[j]='?'<br>
+                    g[j][j]='?'<br>
+        elif i[-1]=="No":<br>
+            for j in range(len(s)):<br>
+                if i[j]!=s[j]:<br>
+                    g[j][j]=s[j]<br>
+                else:<br>
+                    g[j][j]="?"<br>
+        print("\nSteps of Candidate Elimination Algorithm",data.index(i)+1)<br>
+        print(s)<br>
+        print(g)<br>
+        gh=[]<br>
+
+for i in g:<br>
+ for j in i:<br>
+  if j!='?':<br>
+   gh.append(i)<br>
+   break<br>
+print("\nFinal specific hypothesis:\n",s)<br>
+print("\nFinal general hypothesis:\n",gh)<br>
+
+# OUTPUT<br>
+
+![image](https://user-images.githubusercontent.com/97940767/210214107-5cafff8e-c76b-48ef-8521-86e249250d48.png)<br>
+
+
+# 10). Write a program to implement the N QUEEN problem
+
+global N<br>
+N = 4<br>
+def printSolution(board):<br>
+ for i in range(N):<br>
+   for j in range(N):<br>
+     print (board[i][j], end = " ")<br>
+   print()<br>
+def isSafe(board, row, col):<br>
+ for i in range(col):<br>
+   if board[row][i] == 1:<br>
+    return False<br>
+ for i, j in zip(range(row, -1, -1),range(col, -1, -1)):<br>
+   if board[i][j] == 1:<br>
+    return False<br>
+ for i, j in zip(range(row, N, 1),range(col, -1, -1)):<br>
+   if board[i][j] == 1:<br>
+    return False<br>
+ return True<br>
+def solveNQUtil(board, col):<br>
+ if col >= N:<br>
+   return True<br>
+ for i in range(N):<br>
+   if isSafe(board, i, col):<br>
+     board[i][col] = 1 <br>
+     if solveNQUtil(board, col + 1) == True:<br>
+       return True<br>
+     board[i][col] = 0<br>
+ return False<br>
+def solveNQ():<br>
+ board = [ [0, 0, 0, 0],<br>
+ [0, 0, 0, 0],<br>
+ [0, 0, 0, 0],<br>
+ [0, 0, 0, 0] ]<br>
+ if solveNQUtil(board, 0) == False:<br>
+   print ("Solution does not exist")<br>
+   return False<br>
+ printSolution(board)<br>
+ return True<br>
+solveNQ()<br>
+
+# OUTPUT<br>
+
+![image](https://user-images.githubusercontent.com/97940767/210214323-1a8ec27b-1c6c-453a-89df-f58f77882c1f.png)<br>
