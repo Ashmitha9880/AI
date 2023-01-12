@@ -624,8 +624,10 @@ clf = DecisionTreeClassifier().fit(X_train, y_train)
 print('Accuracy of Decision Tree classifier on training set: {:.2f}'.format(clf.score(X_train, y_train)))
 print('Accuracy of Decision Tree classifier on test set: {:.2f}'.format(clf.score(X_test, y_test)))
 
+# OUTPUT<br>
 
 
+![image](https://user-images.githubusercontent.com/97940767/212030448-c9cbacdf-5bae-4994-90f2-c7ad483f51e2.png)
 
 
 
