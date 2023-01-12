@@ -599,7 +599,7 @@ aStarAlgo('A', 'G')<br>
 
 # BARATHI MAAM PROGRAM
 
-#Write a program to implement Decision Tree classifier to find accuracy for training and test fruit data set.
+# 1)Write a program to implement Decision Tree classifier to find accuracy for training and test fruit data set.
 
 import pandas as pd
 
