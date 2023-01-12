@@ -617,7 +617,7 @@ scaler = MinMaxScaler()
 X_train = scaler.fit_transform(X_train)
 X_test = scaler.transform(X_test)
 
-# Decision Tree classifier
+#Decision Tree classifier
 from sklearn.tree import DecisionTreeClassifier
 clf = DecisionTreeClassifier().fit(X_train, y_train)
 
