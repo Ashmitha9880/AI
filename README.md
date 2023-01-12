@@ -668,7 +668,7 @@ plt.scatter(centers[:,0], centers[:,1], marker='*', c='g',s=150)
 plt.show()
 
 
-
+# OUTPUT<br>
 
 
 
