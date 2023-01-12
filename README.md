@@ -599,7 +599,30 @@ aStarAlgo('A', 'G')<br>
 
 # BARATHI MAAM PROGRAM
 
+#Write a program to implement Decision Tree classifier to find accuracy for training and test fruit data set.
 
+import pandas as pd
+
+fruits = pd.read_table('fruit_data_with_colors.txt')
+feature_names = ['mass', 'width', 'height', 'color_score']   #all attributes
+
+X = fruits[feature_names]
+y = fruits['fruit_label']                                # y only label
+
+from sklearn.model_selection import train_test_split
+X_train, X_test, y_train, y_test = train_test_split(X, y, random_state=0)
+
+from sklearn.preprocessing import MinMaxScaler
+scaler = MinMaxScaler()
+X_train = scaler.fit_transform(X_train)
+X_test = scaler.transform(X_test)
+
+# Decision Tree classifier
+from sklearn.tree import DecisionTreeClassifier
+clf = DecisionTreeClassifier().fit(X_train, y_train)
+
+print('Accuracy of Decision Tree classifier on training set: {:.2f}'.format(clf.score(X_train, y_train)))
+print('Accuracy of Decision Tree classifier on test set: {:.2f}'.format(clf.score(X_test, y_test)))
 
 
 
