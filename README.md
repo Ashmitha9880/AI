@@ -670,6 +670,7 @@ plt.show()
 
 # OUTPUT<br>
 
+![image](https://user-images.githubusercontent.com/97940767/212031816-a05f8f8d-326a-440c-8424-b8861c392ad5.png)
 
 
 
